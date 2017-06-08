@@ -1,0 +1,140 @@
+HTML DOM querySelector() 方法
+获取文档中 id="demo" 的元素：
+document.querySelector("#demo");
+querySelector() 方法返回文档中匹配指定 CSS 选择器的一个元素。
+注意： querySelector() 方法仅仅返回匹配指定选择器的第一个元素。如果你需要返回所有的元素，请使用 querySelectorAll() 方法替代。
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo">id="demo" 的 p 元素</p>
+<p> 点击按钮修改 id="demo" 的 p 元素内容</p>
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction() {
+    document.querySelector("#demo").innerHTML = "Hello World!";
+}
+</script>
+
+</body>
+</html>
+
+<!------------------------------------end---------------------------------------------->
+<!------------------------------------DOMContentLoaded事件---------------------------------------------->
+【HTML5】DOMContentLoaded事件
+
+这个事件是从HTML中的onLoad的延伸而来的，当一个页面完成加载时,初始化脚本的方法是使用load事件，但这个类函数的缺点是仅在所有资源都完全加载后才被触发,这有时会导致比较严重的延迟,开发人员随后创建了一种自定义事件,domready,它在DOM加载之后及资源加载之前被触发。
+domready事件迅速被众多JavaScript库所采用,它开始在本地浏览器中以DOMContentLoaded的形式被使用;此外,它目前已在HTML5中被标准化,下面的代码显示了DOMContentLoaded是如何在document对象中被触发的;
+  document.addeventListener('DOMContentLoaded',function(){...},false);
+  <!------------------------------------end---------------------------------------------->
+    <!------------------------------------事件DOMContentLoaded和load的区别---------------------------------------------->
+
+事件DOMContentLoaded和load的区别
+
+当初始HTML文档被完全加载和解析时，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架完成加载。
+另一个不同的事件 load 应该仅用于检测一个完全加载的页面。 
+在使用 DOMContentLoaded 更加合适的情况下使用 load 是一个非常流行的错误，所以要谨慎。
+
+// 不兼容老的浏览器，兼容写法见[jQuery中ready与load事件](http://www.imooc.com/code/3253)，或用jQuery
+document.addEventListener("DOMContentLoaded", function() {
+   // ...代码...
+}, false);
+
+window.addEventListener("load", function() {
+    // ...代码...
+}, false);
+用jQuery这么写
+
+// DOMContentLoaded
+$(document).ready(function() {
+    // ...代码...
+});
+
+//load
+$(document).load(function() {
+    // ...代码...
+});
+<!------------------------------------end---------------------------------------------->
+<!--------------------------js 通过感叹号判断变量是否有值-------------------------------->
+var str='';
+var url_all=document.all.url_all.value;
+var url_name=document.all.url_name.value;
+var url_ji=document.all.url_ji.value;
+
+if(!url_ji) url_ji=1;
+
+for(i=1;i<=url_ji;i++)
+{
+if(url_ji<10)
+   {...........省略.
+!表示非的意思
+如果url_li为真 则!url_li为假
+这个“!”不就是个不等于吗，if()的条件是逻辑值，所以那个url_ji只要有值就为true,反之，false!
+<!-------------------------->
+空字符串 是false
+
+console.clear();
+var a='';
+console.log('a:'+a);
+if(!a){
+ console.error('a is null'); 
+}else{
+ console.log('a has value'); 
+}
+运行结果
+
+空格是true
+
+
+数字0是false
+
+var a=0;
+console.log('a:'+a);
+if(!a){
+ console.error('a is null'); 
+}else{
+ console.log('a has value'); 
+}
+
+
+什么情况下会打印a is null
+
+值为undefined;
+值为null
+值为空字符串
+值为数字0
+值为false
+值为String(”) 
+
+
+既然0 是false,那么可以判断数组是否为空 
+ if (titleList.length) {//titleList.length>0
+                if (titleList.length == 1 && titleList[0] == val) {
+                    hideTitleDropdownBox();
+                } else {
+                    this.renderInvoiceCompList(titleList, true);
+                }
+            } else {//发票没有匹配的就是不显示下拉列表
+                hideTitleDropdownBox();
+            }
+<!------------------------------------end---------------------------------------------->
+
+
+<!------------------------------------setAttribute() 方法---------------------------------------------->
+HTML DOM setAttribute() 方法
+
+设置 input 元素的 type 属性：
+document.getElementsByTagName("INPUT")[0].setAttribute("type","button");
+
+定义和用法
+setAttribute() 方法添加指定的属性，并为其赋指定的值。
+如果这个指定的属性已存在，则仅设置/更改值。
+
+参数	        类型	    描述
+attributename	String	必需。您希望添加的属性的名称。
+attributevalue	String	必需。您希望添加的属性值。
