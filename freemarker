@@ -1,1 +1,25 @@
 freemarker
+FreeMarker中的<#if>标签判断 null
+
+
+1. 判断对象是否存在(null) 2. 字符串或数字比较
+FreeMarker中的<#if>标签除了里面直接判断 boolean 类型的变量外，也可以进行表达式判断，有几个细节记录一下：
+
+1. 判断对象是否存在(null)
+经常会用到，如果对象 != null 则xxxx，在freemarker中表达比较奇怪，例如判断 target 是否为null，如果不为 nll 则做xxx动作。
+
+<#if target??>
+    xxxx
+</#if>
+(目标变量后面连续两个??)
+
+2. 字符串或数字比较
+java里标准字符串比较需要 .equals() 方法，在freemarkder中进行了简化，字符串的比较方法和数字做到完全一样。
+
+<#if str == "success">
+    xxx
+</#if>
+
+<#if str !== "error">
+    xxx
+</#if>
