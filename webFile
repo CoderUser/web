@@ -202,3 +202,8 @@ if(a)等价于if(a!=0)
 
 if(a) 如果a为true（真）时，执行if判断的语句体
 if(！a) 如果！a为true（真）时，即a为false（假）时，执行if判断的语句体
+
+运算符	描述	例子
+&&	   and	(x < 10 && y > 1) 为 true
+||	   or	(x==5 || y==5) 为 false
+!	   not	!(x==y) 为 true
