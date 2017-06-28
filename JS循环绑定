@@ -1,0 +1,49 @@
+js循环绑定事件解决方案
+
+相信大家都遇到过类似的问题，for循环绑定完事件最后执行的时候都是最后一个事件相同，比如这段代码 
+Java代码  收藏代码
+<body>  
+<ul id="list">  
+<li>1</li>  
+<li>2</li>  
+<li>3</li>  
+<li>4</li>  
+<li>5</li>  
+</ul>  
+<script>  
+var list_obj = document.getElementsByTagName('li');  
+for (var i = 0; i <= list_obj.length; i++) {        
+  list_obj[i].onclick = function() {      
+    alert(i);      
+  }  
+}  
+</script>  
+</body>  
+
+点击的时候弹出的不是0 1 2 3 4，而是5。 
+
+解决方案也很多种，比如可以新建一个function设置一个私有方法，然后每次new一个object然后再绑定到它的方法上。 
+还有就是闭包，写法相对简单： 
+Java代码  收藏代码
+<body>  
+<ul id="list">  
+<li>1</li>  
+<li>2</li>  
+<li>3</li>  
+<li>4</li>  
+<li>5</li>  
+</ul>  
+<script>  
+var list_obj = document.getElementsByTagName('li');  
+for (var i = 0; i <= list_obj.length; i++) {      
+  (function(){      
+    var p = i     
+    list_obj[p].onclick = function() {      
+      alert(p);      
+    }  
+  })();  
+}  
+</script>  
+</body>  
+
+就是每个循环加上闭包，然后设置一个临时变量，问题解决。 
