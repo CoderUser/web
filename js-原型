@@ -1,0 +1,37 @@
+function Person(name, gender) {
+    this.name = name;
+    this.gender = gender;
+    this.sayHello = function() {
+        console.log('Hello,I am', this.name, '. I\'m a', this.gender);
+    };
+}
+这样定义了一个构造函数，我们创建对象就可以使用这个构造函数作为模板来生成。不过以面向对象的思想来看，不难发现其中的一点问题:name和gender属性是每个实例都各不相同，作为一个自身的属性没有问题，而sayHello方法，每个实例对象应该都有，而且都一样，给每个实例对象一个全新的、完全不同(虽然代码内容一样，但JavaScript中每个sayHello的值都在内存中单独存在)的sayHello方法是没有必要的。
+
+var zs = new Person('zhang san', 'male'),
+    xh = new Person('xiao hong', 'female');
+
+zs.sayHello(); // Hello,I am zhang san . I'm a male
+xh.sayHello(); // Hello,I am xiao hong . I'm a female
+
+zs.sayHello === xh.sayHello;  // false
+上面代码中展示了zs.sayHell和xh.sayHello这两个作用相同，而且看起来代码内容也是完全一样的对象，实际是两个独立的，互不相关的对象。
+
+面向对象思想中，是将公共的、抽象的属性和方法提取出来，作为一个基类，子类继承这个基类，从而继承到这些属性和方法。而JavaScript中则可以通过prototype属性来实现类似的作用。以下是上面代码的改进示例:
+
+function Person(name, gender) {
+    this.name = name;
+    this.gender = gender;
+}
+Person.prototype.sayHello = function() {
+    console.log('Hello,I am', this.name, '. I\'m a', this.gender);
+};
+
+var zs = new Person('zhang san', 'male'),
+    xh = new Person('xiao hong', 'female');
+
+zs.sayHello(); // Hello,I am zhang san . I'm a male
+xh.sayHello(); // Hello,I am xiao hong . I'm a female
+
+zs.sayHello === xh.sayHello;  // true
+应该能回答你的问题了，不过一般很少会xx.prototype={method:xx}这么写的，而应该是
+xx.prototype.method=xxxx。前者是直接替换了原型，后者是在原型上添加或者修改。
