@@ -1,0 +1,29 @@
+DOMContentLoaded事件
+今天查看百度空间源代码，发现多了个util.js文件，打开看看。里面里面定义了addDOMLoadEvent。这是干什么用的？
+
+仔细查看代码，发现在Mozilla添加了DOMContentLoaded事件，这个在以前一直没有用过。                    if (document.addEventListener)
+                        document.addEventListener("DOMContentLoaded", init, false);
+
+好像就是为了兼容实现DOMContentLoaded事件。
+
+网上找了点有关DOMContentLoaded的资料拿来看看。
+
+DOMContentLoaded是firefox下特有的Event, 当所有DOM解析完以后会触发这个事件。
+    与DOM中的onLoad事件与其相近。但onload要等到所有页面元素加载完成才会触发, 包括页面上的图片等等。
+    如果页面的图片很多的话, 从用户访问到onload触发可能需要较长的时间, 而在Ajax运用中, 常常需要在onload中加入许多初始化的动作, 如果由于网络问题引起的图片加载过慢( 见: Ajax优化(2) -- lazierLoad img && js), 则必然影响用户的体验。
+    在这种情况下firefox的DOMContentLoaded事件, 恰恰是我们需要的。
+
+    目前,跨平台的DOMContentLoaded的解决方案有很多, 比如jQuery, Prototype...等等, 其实现原理大同小异.
+
+    在项目中, 我使用了Prototype工具, 以往调用初始化的方法是:
+
+Event.observe(window, "load", init);
+
+    现在有了DOMContentLoaded, 可以替换成如下的方法:
+
+document.observe('contentloaded', init);
+
+
+    最新的prototype中自定义事件已经重新命名, 使用"dom:loaded" 代替了 “contentloaded”.
+
+document.observe('dom:loaded', init);
