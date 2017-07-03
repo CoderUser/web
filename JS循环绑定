@@ -12,7 +12,7 @@ Java代码  收藏代码
 </ul>  
 <script>  
 var list_obj = document.getElementsByTagName('li');  
-for (var i = 0; i <= list_obj.length; i++) {        
+for (var i = 0; i < list_obj.length; i++) {        
   list_obj[i].onclick = function() {      
     alert(i);      
   }  
@@ -35,7 +35,7 @@ Java代码  收藏代码
 </ul>  
 <script>  
 var list_obj = document.getElementsByTagName('li');  
-for (var i = 0; i <= list_obj.length; i++) {      
+for (var i = 0; i < list_obj.length; i++) {      
   (function(){      
     var p = i     
     list_obj[p].onclick = function() {      
