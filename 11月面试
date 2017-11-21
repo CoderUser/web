@@ -1,0 +1,342 @@
+1. 要动态改变层中内容可以使用的方法有（AB ）
+a)innerHTML
+b)innerText
+c)通过设置层的隐藏和显示来实现
+d)通过设置层的样式属性的display属性
+
+2. 当按键盘A时，使用onKeyDown事件打印event.keyCode的结果是（A ）
+a)65
+b)13
+c)97
+d)37
+
+3. 在javascript里，下列选项中不属于数组方法的是（B）；
+a)sort()
+b)length()
+c)concat()
+d)reverse()
+4. 下列哪一个选项可以用来检索被选定的选项的索引号?(B)
+a)disabled
+b)selectedIndex
+c)option
+d)multiple
+
+5. 希望图片具有”提交”按钮同样的功能,该如何编写表单提交?(A )
+a)在图片的onClick事件中手动提交
+b)在图片上添加onSubmit事件
+c)在图片的onSubmit事件中手动提交
+d)在表单中自动提交
+
+6. 使div层和文本框处在同一行的代码正确的是(D );
+a)
+b)
+c)
+d)
+7. 下列选项中,描述正确的是(选择两项) 。( AD )
+a)options.add(new Option(‘a’,'A’))可以动态添加一个下拉列表选项
+b)option.add(new Option(‘a’,'A’))可以动态添加一个下拉列表选项
+c)new Option(‘a’,'A’)中’a'表示列表选项的值,’A'用于在页面中显示
+d)new Option(‘a’,'A’)中’A'表示列表选项的值,’a'用于在页面中显示
+
+8. 、 var emp = new Array(3);
+for(var i in emp)
+以下答案中能与for循环代码互换的是: （选择一项）。(D )
+A for(var i =0; i<emp; i++)
+B for(var i =0; i<Array(3); i++)
+C for(var i =0; i<emp.length(); i++)
+D for(var i =0; i<emp.length; i++)
+
+9. 制作级联菜单功能时调用的是下拉列表框的（A ）事件。
+a)onChange
+b)onFocus
+c)selected
+d)onClick
+
+10. 下列声明数组的语句中，错误的选项是（ C ）。
+a)Var arry= new Array()
+b)Var arry=new Array(3)
+c)Var arry[]=new Array(3)(4)
+d)Var arry=new Array(‘3’,’4’)
+
+11. 下列属性哪一个能够实现层的隐藏?（C ）
+a)display:fals
+b)display:hidden
+c)display:none
+d)display:” ”
+
+12. 下列哪一个选项不属于document对象的方法?（D ）
+a)focus()
+b)getElementById()
+c)getElementsByName()
+d)bgColor()
+
+13. 下列哪项是按下键盘事件(AB )
+a)onKeyDown
+b)onKeyPress
+c)keyCode
+d)onMouseOver
+14. javascript进行表单验证的目的是（B ）
+a)把用户的正确信息提交给服务器
+b)检查提交的数据必须符合实际
+c)使得页面变得美观、大方
+d)减轻服务器端的压力
+15. 、 display属性值的常用取值不包括(C )
+a)inline
+b)block
+c)hidden
+d)none
+
+16. 以下有关pixelTop属性与top属性的说法正确的是。(D )
+a)都是Location对象的属性
+b)使用时返回值都是字符串
+c)都是返回以像素为单位的数值
+d)以上都不对
+
+17. 使用open方法打开具有浏览器工具条,地址栏,菜单栏的窗口，下列选项正确的是__D__
+a)open("x.html","HI","toolbas=1,scrollbars=1,status=1");
+b)open("HI","scrollbars=1,location=1,status=1");
+c)open("x.html","status=yes,menubar=1,location=1");
+d)open("x.html","HI","toolbas=yes,menubar=1,location=1");
+
+18. 下面关闭名为mydiv的层的代码正确的是(C )
+a)document.getElementById(mydiv).style.display="none";
+b)document.getElementById("mydiv").style.display=none;
+c)document.getElementById("mydiv").style.display="none";
+d)document.getElementById("mydiv").style.display=="none";
+19. 为什么要使用Div+CSS布局
+形式与内容分离
+大大减少页面代码，提高页面浏览速度
+结构清晰，有利于SEO
+缩短改版时间， 布局更方便
+一次设计，多次使用
+
+20. Block元素的特点是什么?哪些元素默认为Block元素
+总是在新行上开始；
+高度，行高以及顶和底边距都可控制；
+宽度缺省是它的容器的100%，除非设定一个宽度
+是块元素的有：,,
+,
+, 和21. 、 inline元素的特点是什么?哪些元素属于inline元素?
+和其他元素都在一行上；
+高，行高及顶和底边距不可改变；
+宽度就是它的文字或图片的宽度，不可改变。
+
+是inline元素的有：, , ,
+, , 
+和。 
+
+22. 、 javascript中表达式parseInt(“X8X8”)+paseFloat(‘8’)的结果是什么?( C)
+a)8+8
+b)88
+c)16
+d)“8”+’8
+
+23. String对象的方法不包括(C )
+a)charAt()；
+b)substring()
+c)length
+d)toUpperCase()
+
+24. 关于setTimeout(“check”,10)中说法正确的是( D)
+a)程序循环执行10次
+b)Check函数每10秒执行一次
+c)10做为参数传给函数check
+d)Check函数每10毫秒执行一次
+
+25. 以下哪个单词不属于javascript关键字：（C）
+a)with
+b)parent
+c)class
+d)void 
+
+
+1. 在一个框架的属性面板中，不能设置下面哪一项。（  C ） 
+
+A．源文件 ; B．边框颜色 ;   
+C．边框宽度  
+D．滚动条 
+
+2. CSS样式表根据所在网页的位置，可分为?(B )
+
+A．行内样式表、内嵌样式表、混合样式表
+B．行内样式表、内嵌样式表、外部样式表
+C．外部样式表、内嵌样式表、导入样式表
+D．外部样式表、混合样式表、导入样式表
+
+3.对于标签，其中*代表GET或（ C ）
+
+A. SET
+B. PUT
+C. POST
+D. INPUT
+
+4. HTML代码
+表示?(D )
+A. 创建表格
+B. 创建一个滚动菜单
+C. 设置每个表单项的内容
+D. 创建一个下拉菜单 
+
+5. 在表单中包含性别选项，且默认状态为“男”被选中，下列正确的是（ A ）
+A．
+男
+B．
+男
+C．
+男
+D．
+男
+
+6. 在CSS中下面哪种方法表示超链接文字在鼠标经过时，超链接文字无下划线?(B )
+
+A. A:link{TEXT-DECORATION: underline }
+B. A:hover {TEXT-DECORATION: none}
+C. A:active {TEXT-DECORATION: blink }
+D. A:visited {TEXT-DECORATION: overline }
+7. 下面代码片段，说法正确的是:(B )
+.DIV1 { position:absolute;
+line-height:22px;
+height:58px;
+background-color: #FF0000; }
+A. Line-height:22px;修饰文本字体大小
+B. position:absolute;表示绝对定位，被定位的元素位置固定
+C. height:58px; 表示被修饰的元素距离别的元素的距离
+D. background-color: #FF0000; 表示被修饰的元素的背景图像
+
+8. 在Dreamweaver 中, 在设置各个框架属性时, 参 数Scroll 是用来设置（ B ）属性的。
+A. 是否进行颜色设置
+B. 是否出现滚动条
+C. 是否设置边框宽度
+D. 是否使用默认边框宽度
+
+9. 以下链接到电子邮件的正确格式是(B )
+
+A. 邮箱
+B. 邮箱
+C. 邮箱
+D. 邮箱
+
+10. 若将Dreamweaver中２个横向相邻的单元格合并，则两单元格中文字会（ A ）
+
+A．文字合并
+B．左单元格文字丢失
+C．右单元格文字丢失
+D．系统出错 
+
+11. ID为left的DIV标签，用CSS设置DIV的左边为红色实线，下面设置正确的是 (C )
+A．style=”border-top: #ff0000 1 solid;”
+B．style=”border-left: 1, #ff0000 ,solid;”
+C．style=”border-left: 1 #ff0000 solid;”
+D．style=”border-right: 1, #ff0000, dashed;”
+
+12. html语言中，设置表格边框宽度的标签是?(A )
+
+A.
+B.
+C.
+D.
+13. 的意思是?(A )
+A. 图像相对于周围的文本左对齐
+B. 图像相对于周围的文本右对齐
+C. 图像相对于周围的文本底部对齐
+D. 图像相对于周围的文本顶部对齐
+14. 一个有 3 个框架的 Web 页实际上有几个独立 的HTML 文件?（C ）
+
+A. 2 B. 3
+C. 4 D. 5
+15. 下列标签可以不成对出现的是（ B）
+
+A．〈HTML〉〈/HTML〉
+B．〈P〉 〈/P〉
+C．〈TITLE〉〈/TITLE〉
+D．〈BODY〉〈/BODY〉
+
+16. 下列那个不是CSS选择符(A )
+A．p
+B．.td
+C．#box
+D．shop
+
+17. 在CSS的三种选择符种，哪个优先级最高?( C )
+A．标签选择符
+B．类选择符号
+C．ID选择符
+
+18. 引入样式表的方式有几种?
+引入样式表的方式有两种：方式一通过link引入，如<link rel=“stylesheet”
+Type=“text/css” href=“css.css”> 方法二 通过import导入 如import css.css
+
+19. 关于Document对象，下列叙述正确的是（AC ）
+
+a)Document对象表示浏览器中显示的HTML文档
+b)Document对象的常用属性bgcolor用来设置文档的背景图片
+c)Document对象的常用方法getElementById（）用于访问唯一的一个元素
+d)Document对象的常用方法getElementByNames（）
+
+20. 在javascript 中，以下哪个变量名是非法的（B ）
+a)Name
+b)9name
+c)Name_a
+d)Name9
+
+21. Javascript可以在以下什么地方执行?(B )
+a)服务器端的IE浏览器
+b)客户端的IE浏览器
+c)在服务器端的tomcat容器里
+d)在客户端的tomcat容器里
+
+22. 在javascript中，( B )变量在函数外声明，并可从脚本的任意位置访问
+a)局部
+b)全局
+c)typeOf
+d)New
+
+23. 关于javascript说法正确的是（B ）。
+
+a)它是面向对象的
+b)它是基于对象的
+c)它是面向过程的
+d)以上说法都不正确
+
+24. 以下哪条语句会产生运行错误(A )
+A、var obj = ()
+B、var obj = []
+C、var obj = {}
+D、var obj = //
+
+25. 在javascript中，下拉列表框的（B ）方法可从列表中删除一个元素
+
+a)Add( )
+b)Remove( )
+c)Focus( )
+d)blur（）
+
+26. 请选择结果为真的表达式(C )
+a)null instanceof Object
+b)null === undefined
+c)null == undefined
+d)NaN == NaN
+
+27. 在不指定特殊属性的情况下，哪几种HTML标签可以手动输入文本(AB )
+a)
+b)
+c)
+d)
+
+28. 在javascript中，String 对象的方法不包括（D ）。
+a)charAt()
+b)substring()
+c)toUpperCase()
+d)Length
+
+29. 下拉菜单中，用户更改表单元素Select中的值时，就会调用（A ）事件处理程序。( )
+a)onChange
+b)onFocus
+c)onMouseOver
+d)onClick
+
+30. ( C )事件处理程序可用于在用户单击按钮时执行函数
+a)onSubmit
+b)onChange
+c)onClick
+d)onBlur
