@@ -1,6 +1,26 @@
 块级元素：div  , p  , form,   ul,  li ,  ol, dl,    form,   address,  fieldset,  hr, menu,  table
 行内元素：span,   strong,   em,  br,  img ,  input,  label,  select,  textarea,  cite,  
 
+
+在Jquery里面，我们可以看到两种写法:$(function(){}) 和$(document).ready(function(){})
+
+这两个方法的效果都是一样的，都是在dom文档树加载完之后执行一个函数（注意，这里面的文档树加载完不代表全部文件加载完）。
+
+而window.onload是在dom文档树加载完和所有文件加载完之后执行一个函数。也就是说$(document).ready要比window.onload先执行。
+
+
+
+JavaScript onkeydown 事件
+
+用户按下一个键盘按键时会触发 onkeydown 事件。与 onkeypress 事件不同的是，onkeydown 事件是响应任意键按下的处理（包括功能键），onkeypress 事件只响应字符键按下后的处理。
+
+提示
+
+Internet Explorer/Chrome 浏览器使用 event.keyCode 取回被按下的字符，而 Netscape/Firefox/Opera 等浏览器使用 event.which。
+
+onkeydown 获取用户按下的键
+
+
 1. 要动态改变层中内容可以使用的方法有（AB ）
 a)innerHTML
 b)innerText
