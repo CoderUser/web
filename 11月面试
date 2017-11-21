@@ -340,3 +340,44 @@ a)onSubmit
 b)onChange
 c)onClick
 d)onBlur
+
+
+call()和apply()的区别
+
+想要深入了解 call() 和 apply() 这两个方法，那么必须要先知道他们的基本作用：
+
+改变对象的执行上下文
+
+什么是执行上下文？
+
+我们在写一个方法的时候，总是会用到一个关键字this，而this的指向就是我们这里所说的执行上下文（执行环境）
+
+首先我们要知道，this指向的永远是调用该方法的对象
+
+function func () {
+    this.a = 1;
+    console.log(this.a);
+}
+func();  // 1
+
+代码中方法执行后控制台输出1，由于func是全局对象window下的一个方法，那么调用该方法的对象就应该是全局对象window，
+所以this理论上指向的对象就应该是window
+
+如果理论成立，而this.a==1，也就是说变量a是一个全局变量。在控制台上直接输入a或window.a后回车，会发现输出了1，所以在func这个方法中，
+this的指向就是window
+换个方式来验证下：
+
+var person = {
+    name: 'xiao ming',
+    age: 18,
+    who: function () {
+        console.log( 'my name is ' + this.name + ' , ' + this.age + ' years old' );
+        console.log( person === this);
+    }
+}
+
+person.who();
+// my name is xiao ming , 18 years old
+// true
+
+上面这段代码中who方法是person对象的一个属性，被person对象调用，所以this的指向也就是person。
